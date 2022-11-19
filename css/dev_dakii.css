@@ -1,0 +1,22 @@
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+#hi-de {
+    padding: 10%;
+}
+
+#title, #greeting {
+    display: inline-block;
+    margin: 10px auto;
+    
+}
+
+#title {
+    font-size:32px
+}
+
+#greeting, #sub-title {
+    font-size: 28px;
+}
