@@ -1,22 +1,70 @@
+html {
+
+    font-size: 3vh;
+}
+
 body {
+    
     width: 100%;
     height: 100vh;
+    min-width: 40vw;
+    max-width: 90vw;
+    margin: 5vh auto;
+    background-color: #fc2f20ea;
+    color: #FDB750;
+    padding: 2vh 5vw;
 }
 
 #hi-de {
-    padding: 10%;
+    padding: 1vh 2vw;
 }
 
 #title, #greeting {
     display: inline-block;
-    margin: 10px auto;
+    margin: auto;
     
 }
 
 #title {
-    font-size:32px
+    font-size: 1.3rem;
 }
 
 #greeting, #sub-title {
-    font-size: 28px;
+    font-size: 1.1em;
+}
+
+@media (min-width: 1200px) {
+    #greeting, #sub-title {
+        font-size: 1.3rem;
+    }
+
+    #title {
+        font-size: 1.5rem;
+    }
+
+    body {
+        max-width: 60vw;
+    }
+}
+
+nav {
+    border-bottom: 1px solid #FD7F20;
+}
+
+.crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.crumb {
+    display: inline-block;
+}
+
+.crumb a::after {
+    display: inline-block;
+    color: #000;
+    content: '>';
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0 3px;
 }
