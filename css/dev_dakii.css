@@ -27,8 +27,11 @@ body {
     
 }
 
-#header-section {
+.shade {
     background-color: rgba(44, 44, 44, 0.5);
+}
+
+#header-section {
     width: 100%;
 }
 
@@ -45,19 +48,7 @@ body {
     font-size: 1.rem;
 }
 
-@media (min-width: 1200px) {
-    #greeting, #sub-title {
-        font-size: 1.3rem;
-    }
 
-    #title {
-        font-size: 1.5rem;
-    }
-
-    body {
-        max-width: 60vw;
-    }
-}
 
 nav {
     border-bottom: 1px solid #FD7F20;
@@ -74,9 +65,47 @@ nav {
 
 .crumb a::after {
     display: inline-block;
-    color: #000;
     content: '>';
+    color: #FDB750;
     font-size: 1rem;
     font-weight: bold;
     padding: 0 3px;
+}
+
+/* contact me  */
+.columns {
+    column-count: 3;
+    padding: 1vh 2vw;
+    margin: 0% auto;
+}
+
+
+
+.contact-me a {
+    color: #FD7F20;
+}
+
+.contact-me p {
+    color: #FDB750;
+}
+
+@media (min-width: 1200px) {
+    #greeting, #sub-title {
+        font-size: 1.3rem;
+    }
+
+    #title {
+        font-size: 1.5rem;
+    }
+
+    body {
+        max-width: 80vw;
+    }
+
+    /* contact me  */
+.columns {
+    column-count: 3;
+    padding: 1vh 2vw;
+    margin: 0% auto;
+}
 }
