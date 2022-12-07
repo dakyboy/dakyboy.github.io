@@ -1,10 +1,63 @@
+/* default styles here for older browsers. 
+    I tend to go for a 600px - 960px width max but using percentages
+*/
+
+html {
+
+    font-size: 3vh;
+}
+
+body {
+
+    width: 100%;
+    height: 100vh;
+    min-width: 40vw;
+    margin: 10vh auto;
+    background-color: #fc2f20ea;
+    color: #f5a52e;
+    padding: 2vh 5vw;
+}
+
+@media only screen and (min-width: 960px) {
+    /* styles for browsers larger than 960px; */
+}
+
+@media only screen and (min-width: 1440px) {
+
+    /* styles for browsers larger than 1440px; */
+    #greeting,
+    #sub-title {
+        font-size: 1.3rem;
+    }
+
+    #title {
+        font-size: 1.5rem;
+    }
+
+    body {
+        max-width: 80vw;
+    }
+
+    /* contact me  */
+    .columns {
+        column-count: 3;
+        padding: 1vh 2vw;
+        margin: 0% auto;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    /* for sumo sized (mac) screens */
+}
+
+/*for mobile devices with max decive width of 480*/
 @media screen and (max-device-width: 481px) {
     * {
         box-sizing: border-box;
     }
 
     html {
-
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 3vh;
     }
 
@@ -13,10 +66,12 @@
         width: 100%;
         height: 100vh;
         min-width: 40vw;
-        margin: 2vh auto;
-        background-color: #fc2f20ea;
-        color: #FDB750;
-        padding: 2vh 5vw;
+        max-width: 90vw;
+        margin: 1vh auto;
+        background-color: #fc2f20;
+        color: #ffefd7;
+        padding: 0 5vw;
+        align-content: center;
     }
 
     #hi-de {
@@ -32,10 +87,18 @@
 
     .shade {
         background-color: rgba(44, 44, 44, 0.5);
+        
+    }
+
+    #navbar {
+        margin: 0vh auto;
+        margin-bottom: 1vh;
+        
     }
 
     #header-section {
-        width: 100%;
+        box-shadow: 5px 2px 2px rgb(143, 0, 0);
+        margin: 1vh auto;
     }
 
     #title {
@@ -55,7 +118,7 @@
 
 
     nav {
-        border-bottom: 1px solid #FD7F20;
+        border-bottom: .5vh solid #FD7F20;
     }
 
     .crumbs ol {
@@ -83,39 +146,33 @@
         margin: 0% auto;
     }
 
+    .contact-me-sec {
+        box-shadow: 5px 2px 2px #FD7F20;
+    }
 
-
-    .contact-me a {
+    .contact-me-sec a  {
         color: #FD7F20;
     }
 
-    .contact-me p {
-        color: #FDB750;
+    .contact-me-sec p {
+        color: #f2eade;
+    }
+
+    .contact-me a {
+        color: #ffe0c8;
     }
 }
 
 
+@media only screen and (device-width: 768px) {
+    /* default iPad screens */
+}
 
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
+}
 
-@media (min-device-width: 1200px) {
-
-    #greeting,
-    #sub-title {
-        font-size: 1.3rem;
-    }
-
-    #title {
-        font-size: 1.5rem;
-    }
-
-    body {
-        max-width: 80vw;
-    }
-
-    /* contact me  */
-    .columns {
-        column-count: 3;
-        padding: 1vh 2vw;
-        margin: 0% auto;
-    }
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    /* For landscape layouts only */
 }
