@@ -387,12 +387,11 @@ nav {
 
     body {
         min-width: 30vw;
-        max-width: 80vw;
         margin: 0 auto;
-        padding: 0 8vw;
     }
 
     #header-section {
+        max-width: 80vw;
         box-shadow: 5px 2px 2px rgb(143, 0, 0);
         margin: 1vh auto;
     }
