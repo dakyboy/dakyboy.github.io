@@ -107,9 +107,9 @@ nav {
 }
 
 .contact-me-sec {
-    box-shadow: 5px 2px 2px #FD7F20;
+    height:20vh;
     margin: 2vh auto;
-    padding: 2vh 4vw;
+    padding: 4vh 4vw;
 }
 
 .contact-me-sec a {
@@ -384,6 +384,10 @@ nav {
         box-sizing: border-box;
     }
 
+    html {
+        font-size:14px;
+    }
+
 
     body {
         min-width: 30vw;
@@ -404,7 +408,7 @@ nav {
     #greeting {
         display: inline-block;
         margin: -1vw auto;
-
+        
     }
 
     .shade {
@@ -419,25 +423,28 @@ nav {
 
     }
 
-   
+
     #title {
-        font-size: 1.8rem;
+        font-size: calc(1.5rem + 1.2vw);
+        letter-spacing: .2rem;
+        margin-left: .6vw;
     }
 
     #greeting,
     #sub-title {
-        font-size: 1.5rem;
-        margin: 1.1vh auto;
+        font-size: calc(1.3rem + .8vw);
+        margin:0vh auto;
     }
 
     #description {
-        font-size: 1.2rem;
+        margin-top:-0.2vh;
+        font-size: calc(1rem + .4vw);
     }
 
 
 
     nav {
-        border-bottom: .5vh solid #FD7F20;
+        border-bottom: .9vh solid #FD7F20;
     }
 
     .crumbs ol {
@@ -453,7 +460,7 @@ nav {
         display: inline-block;
         content: '>';
         color: #FDB750;
-        font-size: 1rem;
+        font-size: calc(1rem + .2vw);
         font-weight: bold;
         padding: 0 3px;
     }
@@ -462,8 +469,8 @@ nav {
     .columns {
         column-count: 3;
         padding: 1vh 2vw;
-        margin: 0% auto;
-        column-gap: 5vw;
+        margin: 2% auto;
+        column-gap: 12vw;
     }
 
     .contact-me-sec {
@@ -479,6 +486,7 @@ nav {
 
     .contact-me-sec p {
         color: #f2eade;
+        font-size: calc(.9rem + .2vw)
     }
 
     .contact-me a {
@@ -487,7 +495,7 @@ nav {
 
     .y-brands img {
 
-        margin: 1vh vw;
+        margin: 1vh auto;
         background-color: #fffdd1;
         width: 1.8vw;
         height: 1.8vw;
