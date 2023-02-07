@@ -99,17 +99,21 @@ nav {
 }
 
 /* contact me  */
-.columns {
-    column-count: 1;
-    padding: 1vh 2vw;
-    margin: 0% auto;
-    column-gap: 6vw;
+.my-footer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
 }
 
+
 .contact-me-sec {
-    height:20vh;
-    margin: 2vh auto;
-    padding: 4vh 4vw;
+    padding:4%;
+    width: 100vw;
+}
+
+.social-link p {
 }
 
 .contact-me-sec a {
@@ -218,18 +222,6 @@ nav {
     }
 
     /* contact me  */
-    .columns {
-        column-count: 1;
-        padding: 1vh 2vw;
-        margin: 0% auto;
-        column-gap: 6vw;
-    }
-
-    .contact-me-sec {
-        box-shadow: 5px 2px 2px #FD7F20;
-        margin: 2vh auto;
-        padding: 2vh 4vw;
-    }
 
     .contact-me-sec a {
         color: #FD7F20;
@@ -340,15 +332,18 @@ nav {
     }
 
     /* contact me  */
-    .columns {
-        column-count: 2;
-        padding: 1vh 2vw;
-        margin: 0% auto;
-        column-gap: 5vw;
+    .social-link-container {
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .social-link:last-child {
+        flex:1;
+        background-color:aqua;
     }
 
     .contact-me-sec {
-        box-shadow: 5px 2px 2px #FD7F20;
         margin: 2vh auto;
         padding: 2vh 4vw;
     }
@@ -477,6 +472,7 @@ nav {
         box-shadow: 5px 2px 2px #FD7F20;
         margin: 2vh auto;
         padding: 2vh 4vw;
+        width: 100vw;
     }
 
     .contact-me-sec a {
