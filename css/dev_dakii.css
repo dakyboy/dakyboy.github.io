@@ -113,7 +113,8 @@ nav {
     width: 100vw;
 }
 
-.social-link p {
+.social-link {
+    display:flex;
 }
 
 .contact-me-sec a {
@@ -338,10 +339,6 @@ nav {
         justify-content: space-around;
     }
 
-    .social-link:last-child {
-        flex:1;
-        background-color:aqua;
-    }
 
     .contact-me-sec {
         margin: 2vh auto;
