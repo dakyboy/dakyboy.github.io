@@ -1,16 +1,18 @@
-<html lang="en"><head>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Aaron Edaku: Full stack developer</title>
-<meta name="description" content="Aaron Edaku is a skilled full stack developer based in Jinja, Uganda, with expertise in
-            front-end and back-end web and mobile development. Get professional web solutions for your business with Dev
-            Dakii.
+    <meta name="description" content="Aaron Edaku is a skilled full stack developer based in Jinja, Uganda, with expertise in
+            front-end and back-end web and mobile development. Get professional web solutions for your business with The Pouch.
             Contact now!">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100&amp;display=swap"
+        rel="stylesheet">
 
     <style>
         /*Reset*/
@@ -18,12 +20,12 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            
+            list-style: none;
         }
 
         html {
             font-family: 'Roboto', sans-serif;
-            min-height: 100%;
+            width: 100%;
             font-size: 62.5%;
             overflow-x: hidden;
         }
@@ -48,283 +50,331 @@
 </head>
 
 <body class="app-container">
-<header>
-    <nav class="nav-container">
-        <a>
-            <p>Aaron Edaku</p>
-        </a>
-        <div class="nav-links">
-            <a href="#work-title">
-                <p>Work</p>
+    <header>
+        <nav class="nav-container">
+            <a>
+                <p>Aaron Edaku</p>
             </a>
-            <a href="#about-title">
-                <p>About</p>
-            </a>
-            <a href="#contact-title">
-                <p>Contact</p>
-            </a>
+            <div class="nav-links">
+                <a href="#work-title">
+                    <p>Work</p>
+                </a>
+                <a href="#about-title">
+                    <p>About</p>
+                </a>
+                <a href="#contact-title">
+                    <p>Contact</p>
+                </a>
+            </div>
+        </nav>
+        <div id="title-header">
+            <div class="greeting-container">
+                <p id="greeting">Hello, i am </p>
+                <h1 id="title">Aaron Edaku.</h1>
+            </div>
+            <p id="sub-title">A mobile app developer.</p>
+            <p id="description">I love designing and developing solutions built on robust backends and user friendly
+                frontends.
+            </p>
         </div>
-    </nav>
-    <div id="title-header">
-        <div class="greeting-container">
-            <p id="greeting">Hello, i am </p>
-            <h1 id="title">Aaron Edaku.</h1>
-        </div>
-        <p id="sub-title">A mobile app developer.</p>
-        <p id="description">I love designing and developing solutions built on robust backends and user friendly
-            frontends. I take my inspiration from nature, and can be found often taking my dog on walks, as I enjoy the
-            cool breeze brought forth by both Lake Victoria and The Source of The Nile .
-        </p>
-    </div>
-</header>
+    </header>
 
-<style>
-    header {
-        width: 100vw;
-        padding: .1rem;
-        display: flex;
-        flex-flow: column;
+    <style>
+        header {
+            width: 100%;
+            display: flex;
+            flex-flow: column;
 
-    }
+        }
 
-    .nav-container {
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        flex: 1;
-        padding: 2rem;
-        margin: 0 auto;
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: space-between;
-        background-color: rgb(11, 36, 71);
-        overflow: hidden;
-    }
+        .nav-container {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 2rem;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(11, 36, 71);
+            overflow: hidden;
+        }
 
-    .nav-links {
-        display: flex;
-    }
+        .nav-links {
+            display: flex;
+        }
 
-    .nav-links a {
-        padding: 1rem;
-        color: white;
-    }
+        .nav-links a {
+            padding: 1rem;
+            color: white;
+        }
 
-    .nav-links a:hover {
-        color: rgb(209, 211, 212);
-    }
+        .nav-links a:hover {
+            color: rgb(209, 211, 212);
+        }
 
 
-    #title-header {
-        display: flex;
-        flex-flow: column wrap;
-        margin: 10vh auto;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 20vh 4vw;
-        height: 70vh;
-        max-height: 100vh;
-        max-width: 90vw;
+        #title-header {
+            display: flex;
+            flex-flow: column nowrap;
+            margin: 0 auto;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 42vh 4vw 20vh;
+            max-height: 90vh;
 
-    }
+        }
 
-    .greeting-container {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: baseline;
-    }
+        .greeting-container {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: baseline;
+        }
 
-    #title,
-    #greeting,
-    #description {
-        text-align: left;
-    }
+        #title,
+        #greeting,
+        #description {
+            text-align: left;
+        }
 
-    #title,
-    #greeting {
-        margin: -1vw auto;
-    }
+        #title,
+        #greeting {
+            margin: -1vw auto;
+        }
 
-    #title {
-        font-size: calc(1.5rem + 1.8vw);
-    }
+        #title {
+            font-size: calc(1.5rem + 1.8vw);
+        }
 
-    #greeting,
-    #sub-title {
-        font-size: calc(1.3rem + 1.2vw);
-        margin: 1.1rem 1.5rem;
-    }
+        #greeting,
+        #sub-title {
+            font-size: calc(1.3rem + 1.2vw);
+            margin: 1.1rem 1.5rem;
+        }
 
-    #description {
-        flex-grow: 1;
-        font-size: calc(1rem + 1vw);
-        padding: 0 2rem;
-    }
-</style>
-<main class="main-container">
-    <section class="work-container">
-    <h2 id="work-title">Work</h2>
-    <div class="projects-container">
-        <div class="project-container">
+        #description {
+            flex-grow: 1;
+            font-size: calc(1rem + 1vw);
+            padding: 0 2rem;
+        }
+    </style>
+    <main class="main-container">
+        <section class="work-container">
+            <h2 id="work-title">Work</h2>
+            <div class="projects-container">
+                <div class="project-container">
 
-            <p class="project-title">Roll &amp; Scoop Joint</p>
+                    <p class="project-title">Roll &amp; Scoop Joint</p>
+                    <picture>
+                        <img
+                            src="https://res.cloudinary.com/the-pouch/image/upload/c_thumb,w_200,g_face/v1681213479/dev_dakii/rollnscoop_ss_1_it3p19.jpg">
+                    </picture>
+                    <div class="project-description">
+                        <p>Landing site for Ice cream rolls parlour.</p>
+                        <a class="project-link" href="https://thepouchug.github.io/rollnscoop" target="_blank">
+                            <p class="project-link">Visit site</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+            .contact-container,
+            .about-container,
+            .work-container {
+                height: min-content;
+                width: 100%;
+                padding: 2rem 2rem 2rem;
+            }
+
+            .work-container h2 {
+                margin-bottom: 2rem;
+            }
+
+            .work-container {
+                background-color: rgb(165, 215, 232);
+                color: black;
+            }
+
+            .projects-container {
+                display: flex;
+                flex-flow: row wrap;
+            }
+
+            .project-container {
+                display: flex;
+                flex-flow: column nowrap;
+                background-color: rgba(0, 0, 0, 0.45);
+                gap: 2rem 1rem;
+                justify-content: space-between;
+                align-items: center;
+                border: thick solid white;
+            }
+
+            .project-container:hover {
+                border: thick solid blue;
+            }
+
+            .project-title {
+                padding: 1rem;
+            }
+
+            .project-container img {
+                aspect-ratio: 16 / 9;
+            }
+
+            .project-container p {
+                color: white;
+                text-align: center;
+            }
+
+            .project-description {
+                background-color: gray;
+                width: 100%;
+                padding: 2rem;
+            }
+
+            .project-link {
+                margin-top: 1rem;
+            }
+
+            .project-link:hover {
+                color: blue;
+            }
+        </style>
+        <section class="contact-container">
+            <h2 id="contact-title">Contact</h2>
+            <p class="">Do you have a question, an idea, or a project you need help with?
+                Get in Touch with me!</p>
+            <form action="/foo/bar" method="POST">
+                <label for="email">Email address</label>
+
+                <input id="email" type="email">
+
+            </form>
+        </section>
+        <style>
+            .contact-container {
+                background-color: rgb(21, 152, 149);
+            }
+        </style>
+        <section class="about-container">
+            <h2 id="about-title">About</h2>
+            <p class="about-me-desc">I take my inspiration from nature, and can be found often taking my dog on walks,
+                as I enjoy
+                the
+                cool breeze brought forth by both Lake Victoria and The Source of The Nile
+            </p>
+
             <picture>
-                <img src="https://res.cloudinary.com/the-pouch/image/upload/c_thumb,w_200,g_face/v1681213479/dev_dakii/rollnscoop_ss_1_it3p19.jpg">
+                <img src="https://res.cloudinary.com/the-pouch/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1684151199/dev_dakii/aaron_edaku_bc18e7.jpg"
+                    alt="App Screenshot of browse foods screen" width="250" height="250" loading="lazy">
             </picture>
-            <div class="project-description">
-                <p>Landing site for Ice cream rolls parlour.</p>
-                <a class="project-link" href="https://thepouchug.github.io/rollnscoop" target="_blank">
-                    <p class="project-link">Visit site</p>
+
+        </section>
+        <style>
+            .about-container {
+                background-color: rgb(87, 108, 188);
+                display: flex;
+                align-items: center;
+                flex-flow: column wrap;
+                width: 100%;
+            }
+
+            .about-container img {
+                padding: 1rem;
+                box-shadow: rgba(222, 6, 150, 0.881) 0px -50px 36px -28px inset;
+            }
+
+            #about-title {
+                align-self: center;
+            }
+
+            .about-me-desc {
+                padding: 2rem;
+            }
+        </style>
+    </main>
+    <footer class="footer-link-container">
+        <div class="footer-link">
+            <div>
+                <picture>
+                    <img src="https://res.cloudinary.com/the-pouch/image/upload/v1684156813/dev_dakii/github-mark_tvak0g.svg"
+                        style="background-color: white">
+                </picture>
+            </div>
+            <div>
+                <a href="https://github.com/dakyboy" target="_blank">
+                    <p>View projects on Github</p>
                 </a>
             </div>
         </div>
-    </div>
-</section>
-<style>
-    .about-container,
-    .contact-container,
-    .work-container {
-        height: 100vh;
-        width: 100vw;
-        padding: 2rem 2rem 2rem;
-    }
-
-    .work-container h2 {
-        margin-bottom: 2rem;
-    }
-
-    .work-container {
-        background-color: rgb(165, 215, 232);
-        color: black;
-    }
-
-    .projects-container {
-        display: flex;
-        flex-flow: row wrap;
-    }
-
-    .project-container {
-        display: flex;
-        flex-flow: column nowrap;
-        background-color: rgba(0, 0, 0, 0.45);
-        gap: 2rem 1rem;
-        justify-content: space-between;
-        align-items: center;
-        border: thick solid white;
-    }
-
-    .project-container:hover {
-        border: thick solid blue;
-    }
-
-    .project-title {
-        padding: 1rem;
-    }
-
-    .project-container img {
-        aspect-ratio: 16 / 9;
-    }
-
-    .project-container p {
-        color: white;
-        text-align: center;
-    }
-
-    .project-description {
-        background-color: gray;
-        width: 100%;
-        padding: 2rem;
-    }
-
-    .project-link {
-        margin-top: 1rem;
-    }
-
-    .project-link:hover {
-        color: blue;
-    }
-</style>
-    <section class="contact-container">
-    <h2 id="contact-title">Contact</h2>
-</section>
-<style>
-    .contact-container {
-        background-color: rgb(21, 152, 149);
-    }
-</style>
-    <section class="about-container">
-    <h2 id="about-title">About</h2>
-</section>
-<style>
-    .about-container {
-        background-color: rgb(87, 108, 188);
-    }
-</style>
-</main><footer class="footer-link-container">
-    <div class="footer-link">
-        <div>
-            <picture>
-                <img>
-            </picture>
+        <div class="footer-link">
+            <div>
+                <picture>
+                    <img
+                        src="https://res.cloudinary.com/the-pouch/image/upload/v1684157550/dev_dakii/Twitter_social_icons-square-white_i055wv.svg">
+                </picture>
+            </div>
+            <div>
+                <a href="https://twitter.com/Dev_Dakii" target="_blank">
+                    <p>Follow on Twitter</p>
+                </a>
+            </div>
         </div>
-        <div>
-            <a href="https://github.com/dakyboy" target="_blank">
-                <p>View projects on Github</p>
-            </a>
+        <div class="footer-link">
+            <div>
+                <picture>
+                    <img src="https://res.cloudinary.com/the-pouch/image/upload/v1684158145/dev_dakii/icons8-linkedin_f5kynm.svg"
+                        style="background-color: white">
+                </picture>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/aaron-edaku" target="_blank">
+                    <p>Follow on LinkedIn</p>
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="footer-link">
-        <div>
-            <picture>
-                <img>
-            </picture>
-        </div>
-        <div>
-            <a href="https://twitter.com/Dev_Dakii" target="_blank">
-                <p>Follow on Twitter</p>
-            </a>
-        </div>
-    </div>
-    <div class="footer-link">
-        <div>
-            <picture>
-                <img>
-            </picture>
-        </div>
-        <div>
-            <a href="https://www.linkedin.com/in/aaron-edaku" target="_blank">
-                <p>Follow on LinkedIn</p>
-            </a>
-        </div>
-    </div>
-</footer>
-<style>
-    .footer-link-container {
-        width: 100vw;
-        padding: 1rem .4rem;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: baseline;
-        background-color: rgb(11, 36, 71);
-        overflow: hidden;
-    }
+    </footer>
+    <style>
+        .footer-link-container {
+            width: 100%;
+            padding: 1rem .4rem;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: baseline;
+            background-color: rgb(11, 36, 71);
+            overflow: hidden;
+        }
 
-    .footer-link-container a {
-        padding: .6rem .4rem;
-        color: white;
-    }
+        .footer-link-container a {
+            padding: .6rem .4rem;
+            color: white;
+            text-align: left;
+        }
 
-    .footer-link-container a:hover {
-        color: rgb(209, 211, 212);
-    }
+        .footer-link-container a:hover {
+            color: rgb(209, 211, 212);
+        }
 
-    .footer-link {
-        padding: .0rem 4rem;
-    }
-</style>
+        .footer-link {
+            padding: .0rem 4rem;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-link img {
+            width: 4rem;
+            height: 4rem;
+        }
+    </style>
 
 
 
-</body></html>
+</body>
+
+</html>
