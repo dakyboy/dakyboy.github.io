@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +7,8 @@
 
     <title>Aaron Edaku: Full stack developer</title>
     <meta name="description" content="Aaron Edaku is a skilled full stack developer based in Jinja, Uganda, with expertise in
-            front-end and back-end web and mobile development. Get professional web solutions for your business with The Pouch.
+            front-end and back-end web and mobile development. Get professional web solutions for your business with Dev
+            Dakii.
             Contact now!">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,6 +39,7 @@
             margin: 0 auto;
             background-color: rgb(3, 70, 148);
             color: #ffffff;
+            overflow-x: hidden;
         }
 
         .app-container {
@@ -44,6 +47,10 @@
             flex-flow: column wrap;
             justify-content: space-between;
             align-items: center;
+        }
+
+        .slide-content .scroller {
+            width: 1024px;
         }
     </style>
 
@@ -53,9 +60,14 @@
     <header>
         <nav class="nav-container">
             <a>
-                <p>Aaron Edaku</p>
+                <p id="brand">Aaron Edaku</p>
             </a>
-            <div class="nav-links">
+
+            <div>
+                <img src="/images/menu-icon.svg" id="open-menu-button" onclick="openMenu()" class="hamburger">
+                <img src="/images/close-icon.svg" id="close-menu-button" onclick="closeMenu()" class="hamburger">
+            </div>
+            <div id="nav-links">
                 <a href="#work-title">
                     <p>Work</p>
                 </a>
@@ -66,7 +78,10 @@
                     <p>Contact</p>
                 </a>
             </div>
+
         </nav>
+
+
         <div id="title-header">
             <div class="greeting-container">
                 <p id="greeting">Hello, i am </p>
@@ -87,30 +102,58 @@
 
         }
 
+        #brand {
+            padding-top: 2rem;
+            padding-left: 1rem;
+        }
+
         .nav-container {
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 2rem;
+            height: 10vh;
             margin: 0 auto;
             display: flex;
-            flex-flow: row wrap;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
             justify-content: space-between;
-            background-color: rgb(11, 36, 71);
-            overflow: hidden;
+            background-color: rgba(11, 36, 71);
         }
 
-        .nav-links {
+        .hamburger {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+        }
+
+        #close-menu-button {
+            z-index: -4;
+            width: 0;
+            height: 0;
+        }
+
+        #open-menu-button:hover,
+        #close-menu-button:hover {
+            background-color: rgb(49, 99, 168);
+        }
+
+        #nav-links {
+            padding-top: 4rem;
+            width: 100%;
+            opacity: 0;
+            background-color: rgba(11, 36, 71, .89);
             display: flex;
         }
 
-        .nav-links a {
+        #nav-links a {
             padding: 1rem;
             color: white;
         }
 
-        .nav-links a:hover {
+        #nav-links a:hover {
             color: rgb(209, 211, 212);
         }
 
@@ -269,7 +312,7 @@
 
             <picture>
                 <img src="https://res.cloudinary.com/the-pouch/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1684151199/dev_dakii/aaron_edaku_bc18e7.jpg"
-                    alt="App Screenshot of browse foods screen" width="250" height="250" loading="lazy">
+                    alt="App Screenshot of browse foods screen" loading="lazy" width="250" height="250">
             </picture>
 
         </section>
@@ -372,6 +415,7 @@
             height: 4rem;
         }
     </style>
+    <script src="/js/dakii.js"></script>
 
 
 
