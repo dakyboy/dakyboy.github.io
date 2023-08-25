@@ -9,11 +9,11 @@
     <meta name="description" content="Aaron Edaku is a skilled full stack developer based in Jinja, Uganda, with expertise in
             front-end and back-end web and mobile development. Get professional web solutions for your business with Dev
             Dakii.
-            Contact now!">
+            Contact now!" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100&amp;display=swap"
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100&display=swap"
         rel="stylesheet">
 
     <style>
@@ -68,13 +68,13 @@
                 <img src="https://res.cloudinary.com/the-pouch/image/upload/v1691599206/dev_dakii/close-icon_ctjs3l.svg" id="close-menu-button" onclick="closeMenu()" class="hamburger">
             </div>
             <div id="nav-links">
-                <a href="#work-title">
+                <a href="#work-title" onclick="closeMenu()">
                     <p>Work</p>
                 </a>
-                <a href="#about-title">
+                <a href="#about-title" onclick="closeMenu()">
                     <p>About</p>
                 </a>
-                <a href="#contact-title">
+                <a href="#contact-title" onclick="closeMenu()">
                     <p>Contact</p>
                 </a>
             </div>
@@ -103,8 +103,9 @@
         }
 
         #brand {
-            padding-top: 2rem;
+            padding-top: 3rem;
             padding-left: 1rem;
+            color: black;
         }
 
         .nav-container {
@@ -117,7 +118,7 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: space-between;
-            background-color: rgba(11, 36, 71);
+            background-color: rgb(183, 153, 255);
         }
 
         .hamburger {
@@ -130,6 +131,8 @@
         }
 
         #close-menu-button {
+            background-color: rgb(230, 255, 253);
+            opacity: .7;
             z-index: -4;
             width: 0;
             height: 0;
@@ -141,16 +144,22 @@
         }
 
         #nav-links {
-            padding-top: 4rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
             width: 100%;
-            opacity: 0;
-            background-color: rgba(11, 36, 71, .89);
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            background-color: rgb(183, 153, 255);
         }
 
         #nav-links a {
-            padding: 1rem;
-            color: white;
+            padding: 2rem;
+            color: black;
         }
 
         #nav-links a:hover {
@@ -208,10 +217,10 @@
             <div class="projects-container">
                 <div class="project-container">
 
-                    <p class="project-title">Roll &amp; Scoop Joint</p>
+                    <p class="project-title">Roll & Scoop Joint</p>
                     <picture>
                         <img
-                            src="https://res.cloudinary.com/the-pouch/image/upload/c_thumb,w_200,g_face/v1681213479/dev_dakii/rollnscoop_ss_1_it3p19.jpg">
+                            src="https://res.cloudinary.com/the-pouch/image/upload/c_thumb,w_200,g_face/v1681213479/dev_dakii/rollnscoop_ss_1_it3p19.jpg" />
                     </picture>
                     <div class="project-description">
                         <p>Landing site for Ice cream rolls parlour.</p>
@@ -312,7 +321,7 @@
 
             <picture>
                 <img src="https://res.cloudinary.com/the-pouch/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1684151199/dev_dakii/aaron_edaku_bc18e7.jpg"
-                    alt="App Screenshot of browse foods screen" loading="lazy" width="250" height="250">
+                    alt="App Screenshot of browse foods screen" width="250" height="250" loading="lazy" />
             </picture>
 
         </section>
@@ -344,7 +353,7 @@
             <div>
                 <picture>
                     <img src="https://res.cloudinary.com/the-pouch/image/upload/v1684156813/dev_dakii/github-mark_tvak0g.svg"
-                        style="background-color: white">
+                        style="background-color: white" />
                 </picture>
             </div>
             <div>
@@ -357,7 +366,7 @@
             <div>
                 <picture>
                     <img
-                        src="https://res.cloudinary.com/the-pouch/image/upload/v1684157550/dev_dakii/Twitter_social_icons-square-white_i055wv.svg">
+                        src="https://res.cloudinary.com/the-pouch/image/upload/v1684157550/dev_dakii/Twitter_social_icons-square-white_i055wv.svg" />
                 </picture>
             </div>
             <div>
@@ -370,7 +379,7 @@
             <div>
                 <picture>
                     <img src="https://res.cloudinary.com/the-pouch/image/upload/v1684158145/dev_dakii/icons8-linkedin_f5kynm.svg"
-                        style="background-color: white">
+                        style="background-color: white" />
                 </picture>
             </div>
             <div>
@@ -416,9 +425,6 @@
         }
     </style>
     <script src="/js/dakii.js"></script>
-
-
-
 </body>
 
 </html>
