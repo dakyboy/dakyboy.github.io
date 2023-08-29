@@ -36,9 +36,9 @@
             font-size: 1.6rem;
             min-height: 100vh;
             min-width: 300px;
+            max-width: 100%;
             margin: 0 auto;
-            background-color: rgb(3, 70, 148);
-            color: #ffffff;
+            background-color: rgb(183, 153, 255);
             overflow-x: hidden;
         }
 
@@ -47,10 +47,6 @@
             flex-flow: column wrap;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .slide-content .scroller {
-            width: 1024px;
         }
     </style>
 
@@ -64,8 +60,10 @@
             </a>
 
             <div>
-                <img src="https://res.cloudinary.com/the-pouch/image/upload/v1691599206/dev_dakii/menu-icon_ksrcyi.svg" id="open-menu-button" onclick="openMenu()" class="hamburger">
-                <img src="https://res.cloudinary.com/the-pouch/image/upload/v1691599206/dev_dakii/close-icon_ctjs3l.svg" id="close-menu-button" onclick="closeMenu()" class="hamburger">
+                <img src="https://res.cloudinary.com/the-pouch/image/upload/v1691599206/dev_dakii/menu-icon_ksrcyi.svg"
+                    id="open-menu-button" onclick="openMenu()" class="hamburger">
+                <img src="https://res.cloudinary.com/the-pouch/image/upload/v1691599206/dev_dakii/close-icon_ctjs3l.svg"
+                    id="close-menu-button" onclick="closeMenu()" class="hamburger">
             </div>
             <div id="nav-links">
                 <a href="#work-title" onclick="closeMenu()">
@@ -99,13 +97,13 @@
             width: 100%;
             display: flex;
             flex-flow: column;
-
         }
 
         #brand {
             padding-top: 3rem;
             padding-left: 1rem;
             color: black;
+            font-size: 2.5rem;
         }
 
         .nav-container {
@@ -154,12 +152,13 @@
             justify-content: center;
             align-items: center;
             visibility: hidden;
-            background-color: rgb(183, 153, 255);
+            background-color: rgba(183, 153, 255, .9);
         }
 
         #nav-links a {
             padding: 2rem;
             color: black;
+            font-size: calc(3rem + 1vw);
         }
 
         #nav-links a:hover {
@@ -170,18 +169,18 @@
         #title-header {
             display: flex;
             flex-flow: column nowrap;
-            margin: 0 auto;
-            justify-content: flex-start;
             align-items: flex-start;
-            padding: 42vh 4vw 20vh;
-            max-height: 90vh;
-
+            background-color: rgb(172, 188, 255);
+            max-width: 100%;
+            min-height: 100vh;
+            justify-content: center;
+            padding: 0 2rem 0;
         }
 
         .greeting-container {
             display: flex;
-            flex-flow: row wrap;
-            align-items: baseline;
+            flex-flow: column;
+            align-items: flex-start;
         }
 
         #title,
@@ -190,25 +189,18 @@
             text-align: left;
         }
 
-        #title,
-        #greeting {
-            margin: -1vw auto;
-        }
-
         #title {
-            font-size: calc(1.5rem + 1.8vw);
+            font-size: calc(4rem + 1.5vw);
         }
 
         #greeting,
-        #sub-title {
-            font-size: calc(1.3rem + 1.2vw);
-            margin: 1.1rem 1.5rem;
+        #sub-title,
+        #description {
+            font-size: calc(3.5rem + 1vw);
         }
 
         #description {
-            flex-grow: 1;
-            font-size: calc(1rem + 1vw);
-            padding: 0 2rem;
+            margin-top: 8%;
         }
     </style>
     <main class="main-container">
