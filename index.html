@@ -15,6 +15,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100&display=swap"
         rel="stylesheet">
+    <link rel="preload" href="https://devdakii.testes/css/devdakii.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://devdakii.testes/css/devdakii.css">
+    </noscript>
 
     <style>
         /*Reset*/
@@ -33,26 +38,22 @@
         }
 
         body {
-            font-size: 1.6rem;
             min-height: 100vh;
             min-width: 300px;
             max-width: 100%;
             margin: 0 auto;
-            background-color: rgb(183, 153, 255);
-            overflow-x: hidden;
-        }
-
-        .app-container {
             display: flex;
             flex-flow: column wrap;
             justify-content: space-between;
             align-items: center;
+            background-color: rgb(183, 153, 255);
+            overflow-x: hidden;
         }
     </style>
 
 </head>
 
-<body class="app-container">
+<body>
     <header>
         <nav class="nav-container">
             <a>
@@ -60,6 +61,7 @@
             </a>
 
             <div>
+
                 <img src="https://res.cloudinary.com/the-pouch/image/upload/v1691599206/dev_dakii/menu-icon_ksrcyi.svg"
                     id="open-menu-button" onclick="openMenu()" class="hamburger">
                 <img src="https://res.cloudinary.com/the-pouch/image/upload/v1691599206/dev_dakii/close-icon_ctjs3l.svg"
@@ -80,23 +82,15 @@
         </nav>
 
 
-        <div id="title-header">
-            <div class="greeting-container">
-                <p id="greeting">Hello, i am </p>
-                <h1 id="title">Aaron Edaku.</h1>
-            </div>
-            <p id="sub-title">A mobile app developer.</p>
-            <p id="description">I love designing and developing solutions built on robust backends and user friendly
-                frontends.
-            </p>
-        </div>
+
     </header>
 
     <style>
         header {
-            width: 100%;
             display: flex;
             flex-flow: column;
+            align-items: center;
+            max-width: 100%;
         }
 
         #brand {
@@ -152,7 +146,7 @@
             justify-content: center;
             align-items: center;
             visibility: hidden;
-            background-color: rgba(183, 153, 255, .9);
+            background-color: rgba(183, 153, 255, 1);
         }
 
         #nav-links a {
@@ -164,46 +158,57 @@
         #nav-links a:hover {
             color: rgb(209, 211, 212);
         }
-
-
-        #title-header {
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: flex-start;
-            background-color: rgb(172, 188, 255);
-            max-width: 100%;
-            min-height: 100vh;
-            justify-content: center;
-            padding: 0 2rem 0;
-        }
-
-        .greeting-container {
-            display: flex;
-            flex-flow: column;
-            align-items: flex-start;
-        }
-
-        #title,
-        #greeting,
-        #description {
-            text-align: left;
-        }
-
-        #title {
-            font-size: calc(4rem + 1.5vw);
-        }
-
-        #greeting,
-        #sub-title,
-        #description {
-            font-size: calc(3.5rem + 1vw);
-        }
-
-        #description {
-            margin-top: 8%;
-        }
     </style>
     <main class="main-container">
+        <div id="title-header">
+            <div class="greeting-container">
+                <p id="greeting">Hello, i am </p>
+                <h1 id="title">Aaron Edaku.</h1>
+            </div>
+            <p id="sub-title">A mobile app developer.</p>
+            <p id="description">I love designing and developing solutions built on robust backends and user friendly
+                frontends.
+            </p>
+        </div>
+        <style>
+            #title-header {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: flex-start;
+                background-color: rgb(172, 188, 255);
+                min-height: 100vh;
+                max-width: 100%;
+                justify-content: center;
+                margin-top: 4vh;
+                padding: 0 2rem 0;
+            }
+
+            .greeting-container {
+                display: flex;
+                flex-flow: column;
+                align-items: flex-start;
+            }
+
+            #title,
+            #greeting,
+            #description {
+                text-align: left;
+            }
+
+            #title {
+                font-size: calc(4rem + 1.5vw);
+            }
+
+            #greeting,
+            #sub-title,
+            #description {
+                font-size: calc(3.5rem + 1vw);
+            }
+
+            #description {
+                margin-top: 8%;
+            }
+        </style>
         <section class="work-container">
             <h2 id="work-title">Work</h2>
             <div class="projects-container">
@@ -224,14 +229,6 @@
             </div>
         </section>
         <style>
-            .contact-container,
-            .about-container,
-            .work-container {
-                height: min-content;
-                width: 100%;
-                padding: 2rem 2rem 2rem;
-            }
-
             .work-container h2 {
                 margin-bottom: 2rem;
             }
@@ -239,6 +236,9 @@
             .work-container {
                 background-color: rgb(165, 215, 232);
                 color: black;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
             }
 
             .projects-container {
@@ -301,6 +301,9 @@
         <style>
             .contact-container {
                 background-color: rgb(21, 152, 149);
+                display: flex;
+                flex-flow: column;
+                align-items: center;
             }
         </style>
         <section class="about-container">
@@ -313,13 +316,62 @@
 
             <picture>
                 <img src="https://res.cloudinary.com/the-pouch/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1684151199/dev_dakii/aaron_edaku_bc18e7.jpg"
-                    alt="App Screenshot of browse foods screen" width="250" height="250" loading="lazy" />
+                    alt="Developer Aaron Edaku with his dog on nature walk along the river Nile" width="250"
+                    height="250" loading="lazy" />
             </picture>
 
         </section>
+        <div class=".tools">
+            <h2>My Tools</h2>
+
+            <h3>Devops</h3>
+            <ul>
+                <li><a href="https://www.vagrantup.com" target="_blank">
+                        <p>Vagrant</p>
+                    </a>
+                </li>
+                <li><a href="https://www.docker.com/" target="_blank">
+                        <p>Docker</p>
+                    </a>
+                </li>
+                <li><a href="https://git-scm.com/" target="_blank">
+                        <p>Git</p>
+                    </a>
+                </li>
+                <li><a href="https://www.vagrantup.com" target="_blank">
+                        <p>Vagrant</p>
+                    </a>
+                </li>
+            </ul>
+            <h3>Databases</h3>
+            <ul>
+                <li><a href="https://www.mysql.com/" target="_blank">
+                        <p>MySQL</p>
+                    </a>
+                </li>
+                <li><a href="https://www.postgresql.org/" target="_blank">
+                        <p>Postgres</p>
+                    </a>
+                </li>
+                <li><a href="https://www.oracle.com/database/" target="_blank">
+                        <p>Oracle</p>
+                    </a>
+                </li>
+                <li><a href="https://www.vagrantup.com" target="_blank">
+                        <p>Vagrant</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <style>
+            .tools ul {
+                list-style: circle;
+            }
+        </style>
         <style>
             .about-container {
                 background-color: rgb(87, 108, 188);
+                color: white;
                 display: flex;
                 align-items: center;
                 flex-flow: column wrap;

@@ -1,0 +1,47 @@
+/*for mobile devices with max decive width of 500*/
+@media screen and (min-width: 300px) {
+    body {
+        font-size: 1.6rem;
+    }
+
+    .contact-container,
+    .about-container,
+    .work-container {
+        height: min-content;
+        width: 100%;
+        padding: 2rem 2rem 2rem;
+    }
+}
+
+/*for mobile devices with max decive width of 1200*/
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 2rem;
+    }
+
+    #title-header {
+        flex-flow: column nowrap;
+    }
+
+    #title,
+    #greeting,
+    #sub-title,
+    #description {
+        padding: 0 18rem;
+    }
+
+    #nav-links {
+        position: static;
+        visibility: visible;
+    }
+
+    .contact-container,
+    .about-container,
+    .work-container {
+        padding: 0 20%;
+    }
+
+    .about-container {
+        flex-flow: row;
+    }
+}
