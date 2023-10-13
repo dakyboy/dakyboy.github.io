@@ -35,6 +35,7 @@
             width: 100%;
             font-size: 62.5%;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -56,26 +57,24 @@
 <body>
     <header>
         <nav class="nav-container">
-            <a>
+            <a href="#" style="text-decoration:none;">
                 <p id="brand">Aaron Edaku</p>
             </a>
 
             <div>
 
-                <img src="https://res.cloudinary.com/the-pouch/image/upload/v1691599206/dev_dakii/menu-icon_ksrcyi.svg"
-                    id="open-menu-button" onclick="openMenu()" class="hamburger">
-                <img src="https://res.cloudinary.com/the-pouch/image/upload/v1691599206/dev_dakii/close-icon_ctjs3l.svg"
-                    id="close-menu-button" onclick="closeMenu()" class="hamburger">
+                <img src="/images/menu-icon.svg" id="open-menu-button" onclick="openMenu()" class="hamburger">
+                <img src="/images/close-icon.svg" id="close-menu-button" onclick="closeMenu()" class="hamburger">
             </div>
             <div id="nav-links">
-                <a href="#work-title" onclick="closeMenu()">
+                <a href="#work-container" onclick="closeMenu()">
                     <p>Work</p>
                 </a>
-                <a href="#about-title" onclick="closeMenu()">
-                    <p>About</p>
-                </a>
-                <a href="#contact-title" onclick="closeMenu()">
+                <a href="#contact-container" onclick="closeMenu()">
                     <p>Contact</p>
+                </a>
+                <a href="#about-container" onclick="closeMenu()">
+                    <p>About</p>
                 </a>
             </div>
 
@@ -194,22 +193,8 @@
             #description {
                 text-align: left;
             }
-
-            #title {
-                font-size: calc(4rem + 1.5vw);
-            }
-
-            #greeting,
-            #sub-title,
-            #description {
-                font-size: calc(3.5rem + 1vw);
-            }
-
-            #description {
-                margin-top: 8%;
-            }
         </style>
-        <section class="work-container">
+        <section id="work-container">
             <h2 id="work-title">Work</h2>
             <div class="projects-container">
                 <div class="project-container">
@@ -229,16 +214,17 @@
             </div>
         </section>
         <style>
-            .work-container h2 {
+            #work-container h2 {
                 margin-bottom: 2rem;
             }
 
-            .work-container {
+            #work-container {
                 background-color: rgb(165, 215, 232);
                 color: black;
                 display: flex;
                 flex-flow: column;
                 align-items: center;
+                scroll-margin-top: 10vh;
             }
 
             .projects-container {
@@ -287,26 +273,56 @@
                 color: blue;
             }
         </style>
-        <section class="contact-container">
+        <section id="contact-container">
             <h2 id="contact-title">Contact</h2>
             <p class="">Do you have a question, an idea, or a project you need help with?
                 Get in Touch with me!</p>
-            <form action="/foo/bar" method="POST">
-                <label for="email">Email address</label>
 
-                <input id="email" type="email">
-
+            <form action="mailto:eaaron25@gmail.com" method="post" enctype="text/plain" id="contact-me-form">
+                Name:<br><input type="text" name="cName"> <br>
+                Message:<br><input type="text" name="message"><br>
+                <input type="submit" value="Send" class="button-1">
             </form>
         </section>
         <style>
-            .contact-container {
+            #contact-container {
                 background-color: rgb(21, 152, 149);
                 display: flex;
                 flex-flow: column;
                 align-items: center;
+                scroll-margin-top: 10vh;
+            }
+
+            /* CSS */
+            .button-1 {
+                background-color: #EA4C89;
+                border-radius: 8px;
+                border-style: none;
+                box-sizing: border-box;
+                color: #FFFFFF;
+                cursor: pointer;
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 500;
+                height: 40px;
+                line-height: 20px;
+                margin-top: 2rem;
+                outline: none;
+                padding: 10px 16px;
+                text-align: center;
+                transition: color 100ms;
+                vertical-align: baseline;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+            }
+
+            .button-1:hover,
+            .button-1:focus {
+                background-color: #F082AC;
             }
         </style>
-        <section class="about-container">
+        <section id="about-container">
             <h2 id="about-title">About</h2>
             <p class="about-me-desc">I take my inspiration from nature, and can be found often taking my dog on walks,
                 as I enjoy
@@ -369,16 +385,17 @@
             }
         </style>
         <style>
-            .about-container {
+            #about-container {
                 background-color: rgb(87, 108, 188);
                 color: white;
                 display: flex;
                 align-items: center;
                 flex-flow: column wrap;
                 width: 100%;
+                scroll-margin-top: 10vh;
             }
 
-            .about-container img {
+            #about-container img {
                 padding: 1rem;
                 box-shadow: rgba(222, 6, 150, 0.881) 0px -50px 36px -28px inset;
             }
